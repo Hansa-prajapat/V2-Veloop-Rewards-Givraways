@@ -1,6 +1,19 @@
-# Veloop Rewards Giveaways — Final v2
+# Veloop Rewards Giveaways — Final v2 Premium
 
-A consolidated React + Vite frontend demo containing the requested dashboard, Watch & Earn flow, 10 ads, exact per-ad rewards, timer/cancel handling, local persistence, wallet/reward history, activity-based leaderboard, streak, giveaway eligibility form, profile/settings, How It Works, Eligibility & Safety, responsive premium dark UI and animations.
+A polished React + Vite frontend demo for the VELOOP rewards experience. This version keeps the v2 earning/demo flow while upgrading the visual system to a more professional, premium presentation.
+
+## Included
+- Dashboard with premium hero visual and stronger visual hierarchy
+- Watch & Earn flow with 10 ads and exact per-ad rewards
+- Timer and cancel handling; cancelled sessions do not reward credits
+- Local persistence for wallet, activity, completed ads and giveaway entries
+- Wallet, reward history and demo claim flow
+- Activity-based leaderboard and streak
+- Giveaway eligibility check before entry is saved
+- Profile/settings, How It Works and Eligibility & Safety pages
+- Premium dark UI with gradients, depth, hover states and micro-interactions
+- Responsive layouts for mobile, tablet and desktop
+- Reduced-motion support for accessibility
 
 ## Run
 npm install
