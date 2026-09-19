@@ -37,3 +37,39 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;ba
 @media(max-width:900px){.content{padding:25px 20px 60px}.hero{padding:38px 30px}.heroVisual{min-height:310px}.phone{right:10%}}
 @media(max-width:780px){header{height:68px}.content{padding:20px 14px 50px}.hero{padding:30px 22px}.hero h1{font-size:40px}.heroVisual{display:block;min-height:280px;margin-top:8px}.phone{width:205px;right:50%;transform:translateX(50%) rotate(3deg)}.heroVisual:before{right:50%;transform:translateX(50%);width:300px;height:300px}.heroVisual:after{right:50%;transform:translateX(50%);width:225px;height:225px}.o1{right:8%;top:3%;width:65px;height:65px}.o2{left:7%;bottom:5%}.stats{gap:10px}.stat{border-radius:15px}.adCard:hover{transform:none}.adCard:active{transform:scale(.985)}.pageTitle h1{font-size:32px}.giveawayCard{border-radius:18px}}
 @media(max-width:430px){.hero h1{font-size:35px}.hero p{font-size:11px}.heroBtns button{width:100%}.heroVisual{min-height:245px}.phone{width:185px}.phoneCard img{height:112px}.heroVisual:before{width:245px;height:245px}.heroVisual:after{width:185px;height:185px}.content{padding-left:12px;padding-right:12px}}
+
+
+/* Veloop V4 motion layer */
+.quickActions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.quickAction{position:relative;overflow:hidden;display:flex;align-items:center;gap:13px;text-align:left;width:100%;min-height:82px;padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:linear-gradient(145deg,rgba(18,22,37,.98),rgba(10,13,24,.98));color:#fff;cursor:pointer;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.quickAction:before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.10) 45%,transparent 65%);transform:translateX(-130%);animation:cardSweep 5.5s ease-in-out infinite}
+.quickAction:after{content:"";position:absolute;left:-20%;bottom:0;width:140%;height:1px;background:linear-gradient(90deg,transparent,#5ee7f7,#9b78ff,#f06aa8,transparent);transform:translateX(-45%);animation:lineTravel 3.8s linear infinite}
+.quickAction:hover{transform:translateY(-6px);border-color:rgba(139,92,246,.38);box-shadow:0 20px 45px rgba(0,0,0,.34),0 0 30px rgba(99,102,241,.10)}
+.quickIcon{display:grid;place-items:center;width:43px;height:43px;flex:0 0 43px;border-radius:14px;background:linear-gradient(145deg,rgba(139,92,246,.24),rgba(34,211,238,.08));border:1px solid rgba(139,92,246,.24);color:#bca9ff;box-shadow:0 0 24px rgba(139,92,246,.12);animation:iconFloat 3s ease-in-out infinite}
+.quickAction:nth-child(2) .quickIcon{color:#ff86bd;animation-delay:-1s}.quickAction:nth-child(3) .quickIcon{color:#6ee7f5;animation-delay:-2s}
+.quickAction span:nth-child(2){display:flex;flex-direction:column;gap:5px;min-width:0}.quickAction b{font-size:12px}.quickAction small{font-size:9px;line-height:1.45;color:#8f96aa}.quickAction>svg{margin-left:auto;color:#69728c;transition:.25s}.quickAction:hover>svg{color:#fff;transform:translate(3px,-3px)}
+.stat:before,.adCard:after,.section:after,.leaderCard:after,.history:after,.profileCard:after,.settingsCard:after,.milestone:after,.walletCard:before{content:"";position:absolute;pointer-events:none;z-index:3;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(98,222,255,.0) 10%,rgba(98,222,255,.85) 42%,rgba(173,117,255,.9) 58%,rgba(240,106,168,.7) 72%,transparent 100%);transform:translateX(-100%);animation:borderLine 5s linear infinite}
+.stat,.adCard,.section,.leaderCard,.history,.profileCard,.settingsCard,.milestone,.walletCard{isolation:isolate}
+.stat:nth-child(2):before{animation-delay:-1.25s}.stat:nth-child(3):before{animation-delay:-2.5s}.stat:nth-child(4):before{animation-delay:-3.75s}
+.adCard:after{animation-duration:4.6s;animation-delay:-.8s}.section:after,.leaderCard:after,.history:after,.profileCard:after,.settingsCard:after,.milestone:after,.walletCard:before{animation-duration:6s}
+.progressPanel{position:relative;overflow:hidden}.progressPanel:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(100,220,255,.035),transparent);transform:translateX(-100%);animation:panelSweep 6s linear infinite;pointer-events:none}
+.ring{position:relative;background:conic-gradient(from -90deg,#55ddeb 0 var(--p),rgba(255,255,255,.07) var(--p) 100%);box-shadow:0 0 30px rgba(85,221,235,.12);transition:background .45s ease;animation:ringPulse 2.8s ease-in-out infinite}
+.ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#101321;box-shadow:inset 0 0 25px rgba(0,0,0,.35)}
+.ring>div{position:relative;z-index:1}
+.timerCircle{position:relative;display:grid;place-items:center;background:conic-gradient(from -90deg,#43d9ff 0 var(--timerProgress),rgba(255,255,255,.075) var(--timerProgress) 100%);transition:background .8s linear;box-shadow:0 0 38px rgba(67,217,255,.16);animation:timerPulse 2s ease-in-out infinite}
+.timerCircle:before{content:"";position:absolute;inset:7px;border-radius:50%;background:#101321;box-shadow:inset 0 0 25px rgba(0,0,0,.5)}
+.timerInner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}.timerInner b{font-size:30px}.timerInner span{font-size:8px;color:#8e96ab}.timerHint{margin-top:8px;font-size:8px;color:#55ddeb;animation:hintBlink 1.8s ease-in-out infinite}
+.bar i{position:relative;overflow:hidden}.bar i:after,.bannerLine i:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:translateX(-120%);animation:progressShine 2.2s linear infinite}
+.adCard .adImg:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.12) 48%,transparent 61%);transform:translateX(-120%);animation:imageSweep 5.5s ease-in-out infinite;pointer-events:none}
+
+@keyframes borderLine{0%{transform:translateX(-100%)}45%,100%{transform:translateX(100%)}}
+@keyframes cardSweep{0%,55%{transform:translateX(-130%)}75%,100%{transform:translateX(130%)}}
+@keyframes lineTravel{0%{transform:translateX(-55%)}100%{transform:translateX(55%)}}
+@keyframes progressShine{0%,55%{transform:translateX(-120%)}80%,100%{transform:translateX(120%)}}
+@keyframes imageSweep{0%,58%{transform:translateX(-120%)}82%,100%{transform:translateX(120%)}}
+@keyframes panelSweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@keyframes iconFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(2deg)}}
+@keyframes ringPulse{0%,100%{filter:drop-shadow(0 0 4px rgba(85,221,235,.08))}50%{filter:drop-shadow(0 0 12px rgba(85,221,235,.24))}}
+@keyframes timerPulse{0%,100%{filter:drop-shadow(0 0 5px rgba(67,217,255,.08))}50%{filter:drop-shadow(0 0 16px rgba(67,217,255,.28))}}
+@keyframes hintBlink{0%,100%{opacity:.45}50%{opacity:1}}
+@media(max-width:780px){.quickActions{grid-template-columns:1fr}.quickAction{min-height:72px}.quickAction:hover{transform:none}.timerInner b{font-size:26px}}
